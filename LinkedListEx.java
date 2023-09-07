@@ -24,6 +24,24 @@ public class LinkedListEx {
 		head = newnode;
 		
 	}
+	public  void addLast(int data)
+	{
+		Node newnode = new Node(data);
+		if(head == null)
+		{
+			head = newnode;
+			return;
+		}
+		else
+		{
+			Node temp = head;
+			while(temp.next != null)
+			{
+				temp=temp.next;
+			}
+			temp.next = newnode;
+		}
+	}
 	public void display()
 	{
 		Node temp = head;
@@ -43,6 +61,8 @@ public class LinkedListEx {
 		list.addFirst(20);
 		list.addFirst(30);
 		list.addFirst(40);
+		list.addLast(100);
+		list.addLast(200);
 		
 		list.display();
 	}
